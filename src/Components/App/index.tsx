@@ -20,6 +20,7 @@ const App: React.FC = () => {
         title: value,
         complete: false,
       }])
+      reset()
     }
   }
 
@@ -40,6 +41,9 @@ const App: React.FC = () => {
       }
       return {...todo, complete: !todo.complete}
     }))
+  }
+  const reset = ():void => {
+    setValue('')
   }
 
   useEffect(()=> {

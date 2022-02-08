@@ -76,7 +76,7 @@ b(1,true)
 const all = <M, T>(a: M, b:T) =>{
     return `${a}, ${b}`
 }
-all(2,{3:3})
+all(2,{3:'3'})
 //
 interface ILength {
     length: number
