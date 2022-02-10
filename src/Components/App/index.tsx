@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useTypedSelector } from "../../Hooks/useTypedSelector";
 
 import { ITodo } from "../../Types/data";
 
@@ -8,7 +9,8 @@ const App: React.FC = () => {
   const [value, setValue] = useState('')
   const [todos, setTodos] = useState<ITodo[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
-
+  const users = useTypedSelector((store)=> store.user.users)
+  
   const handleChange:React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setValue(e.target.value)
   }
